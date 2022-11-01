@@ -1,0 +1,84 @@
+.App {
+  text-align: center;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  min-height: 500px;
+}
+
+#calculator{
+  height: 35%;
+  width: 50%;
+  border: 2px solid white;
+  padding: 10px 5px 5px 5px;
+  display: grid;
+  grid-template-areas: 
+  "a a a"
+  "b b c"
+  "b b c"
+  "b b c"
+  "d d d";
+  border-radius: 5px;
+  background-color: black;
+}
+
+#display{
+    grid-area: a;
+    color: rgb(231, 231, 228);
+    font-weight: bold;
+    font-size: 34px;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    border-radius: 7px;
+    margin:0 5px 5px 5px;
+    padding-right: 10px;
+}
+.button{
+  border: 1px solid black;
+  border-radius: 2px;
+  margin: 5px;
+}
+ #numbers{
+  grid-area:b;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);  
+}
+#numbers button{
+  font-weight: bold;
+  font-size: 24px;
+  color: wheat;
+  background-color: green;
+}
+#operators{
+  grid-area:c;
+  display: grid;
+  grid-template-rows: repeat(4,1fr);
+}
+#operators button{
+  font-weight: bold;
+  font-size: 24px;
+  color: wheat;
+  background-color: navy;
+}
+#finish{
+  grid-area:d;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+#finish button{
+  font-weight: bold;
+  font-size: 24px;
+  color: burlywood;
+  background-color: rgb(100, 0, 0);
+}
+
+@media (max-height:700px) {
+  #calculator{
+    height: 50%;
+  }
+}

@@ -4,6 +4,7 @@
   display:flex;
   align-items:center;
   justify-content: center;
+  background-color: rgb(223, 223, 223);
   color: white;
 }
 
@@ -34,12 +35,25 @@ button#new-quote{
   color: white;
   border: none;
   padding:3px 6px ;
-  border-radius:4px;
-  box-shadow: rgba(0, 0, 0, 0.33) 0px 5px 15px;
+  border-radius:5px;
+  background-color: rgb(223, 223, 223);
+  -webkit-box-shadow: 10px 10px 35px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 35px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 35px 0px rgba(0,0,0,0.75);
+cursor: pointer;
+    outline: 0;
+    transition: 0.3s linear;
 }
+button:active {
+  transform: scale(0.85);
+  box-shadow: 3px 2px 25px 1px rgba(0,0,0,0.25);
+}
+
 
 a#tweet-quote{
   width: 20px;
   align-self: start;
 
 }
+
+

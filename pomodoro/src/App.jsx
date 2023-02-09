@@ -28,8 +28,10 @@ function App() {
       if (ssion) setTimer(secondsLeft)
       if (!ssion) setStop(secondsLeft)
 
-      if (secondsLeft <= 0) {
+      if (secondsLeft <= 2) {
         audio.play()
+      }
+      if (secondsLeft <= 0) {
         if (ssion) {
           clearInterval(timeInterval)
           clearInterval(timeInterval.current)
@@ -47,24 +49,6 @@ function App() {
       }
     }, 1000)
   }
-  // function startBreak() {
-  //   changeON(true)
-  //   const future = Date.now() + stop * 1000
-  //   setSsion(false)
-
-  //   stp.current = setInterval(() => {
-  //     const secsLeft = Math.round((future - Date.now()) / 1000)
-  //     setMinutes(Math.floor(secsLeft / 60))
-  //     setSeconds(secsLeft % 60)
-  //     setStop(secsLeft)
-  //     console.log(secsLeft, future, stp)
-
-  //     if (secsLeft <= 0) {
-  //       clearInterval(stp)
-  //       return
-  //     }
-  //   }, 1000)
-  // }
 
   const stopTimer = () => {
     if (ssion) {

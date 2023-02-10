@@ -34,8 +34,7 @@ function App() {
       })
       .catch(err => {
         alert("PLEASE, TRY TO PRESS THE BUTTON LESS OFTEN, YOU'RE EXCEEDING THE CAPACITY OF THE API")
-        setQuote()
-        setAuthor()
+
         console.error(err);
         handleClick()
       });
